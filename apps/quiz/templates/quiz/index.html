@@ -1,27 +1,19 @@
-<!-- 
-{% extends "quiz/base.html" %}
-{% block title %}AIクイズ{% endblock %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
 
-{% block content %}
- -->
-<!-- 
 
+
+<!-- ここが恐らくトップ画面になりそう -->
 <div class="text-center">
-    {% if current_user.is_authenticated %}
-    <p>AIの作り出した問題に答えるクイズアプリです。</p>
-
-    {% else %}
-    <p>
-        ログイン、もしくは新規登録を行ってください。
-    </p>
-    {% endif %}
-</div>
- -->
- {% extends "quiz/base" %}
-{% block title %}AIクイズ{% endblock %}
-{% block content %}
-
- <div class="text-center">
 <h1 class="l-title">AI QUIZ</h1>
 <p class="l-space">AIの作り出したクイズに挑戦しよう。</p>
     {% if current_user.is_authenticated %}
@@ -39,7 +31,6 @@
      <button class="u-button__ranking"> 
      ランキングを見る
      </button>  
-     <!-- ランキングはok -->
     </a>
 
     <a class="nav-link" href="">
@@ -76,5 +67,3 @@ Copyright © 2023 Taguchi kakuto
                  Asahi kei
                  Takasu ayami 
 </footer>
- 
-{% endblock %}
