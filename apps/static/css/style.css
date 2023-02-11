@@ -324,6 +324,34 @@ input[type="search"] {
   color: red;
 }
 
+.l-signup__text {
+  font-size: 25px;
+  width: 60%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.u-signbutton__submit {
+  background: #abaaa9;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
+}
+.u-signbutton__submit:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  /* font-size: 22px; */
+  height: 56px;
+  width: 220px;
+}
+
 /* ユーザー登録画面ここまで */
 
 .l-space {
