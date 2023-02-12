@@ -1,14 +1,17 @@
-{% extends "quiz/base.html" %}
+{% extends "quiz/base2.html" %}
 
 {% block title %}ランキング表{% endblock %}
     
 {% block content %}
+<h1 class="l-title">Ranking</h1>
 
 <div class="card col-md-18 dt-image-content">
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>順位</th>
+                <!-- <th>ID</th> -->
                 <th>名前</th>
                 <th>ハイスコア</th>
             </tr>
@@ -16,7 +19,8 @@
         <tbody>
             {% for user in users %}
             <tr>
-                <td>{{ user.id }}</td>
+                <td></td>
+                <!-- <td>{{ user.id }}</td> -->
                 <td>{{ user.username }}</td>
                 <td>{{ user.high_score }}</td>
             </tr>
@@ -24,4 +28,23 @@
         </tbody>
     </table>
 </div>
+<div class="u-flex">
+<a class="nav-link" href="{{ url_for('quiz.index') }}">
+     <button class="u-button__challenge">  
+     Menuに戻る
+     </button> 
+    </a>
+<a class="nav-link" href="{{ url_for('quiz.quiz_make') }}">
+     <button class="u-button__challenge">  
+     クイズに挑戦する
+     </button> 
+    </a>
+
+    <a class="nav-link" href="{{ url_for('auth.logout') }}">
+        <button class="u-button__ranking">
+            ログアウト
+        </button>
+    </a>
+    </div>
+
 {% endblock %}
