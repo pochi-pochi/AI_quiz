@@ -99,11 +99,11 @@ def quiz_page():
             correct_or_not.append(1)
             correct_count += 1
             quiz_num += 1
-            flash("正解!")
+            # flash("正解!")
         else:
             correct_or_not.append(0)
             quiz_num += 1
-            flash("不正解…")
+            # flash("不正解…")
         response = redirect(url_for("quiz.quiz_page"))
         response.set_cookie("correct_count", str(correct_count))
         response.set_cookie("quiz_num", str(quiz_num))

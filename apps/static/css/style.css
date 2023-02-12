@@ -375,3 +375,33 @@ input[type="search"] {
   margin-top: 80px;
   margin-left: 432px;
 }
+
+/* 結果画面構成 */
+.u-flex2 {
+  display: flex;
+  margin-left: 500px;
+}
+
+.c-high__score {
+  font-size: 20px;
+  /* margin-right: 100px; */
+  margin-left: 264px;
+}
+.c-current__score {
+  font-size: 20px;
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+/* その他 */
+table {
+  counter-reset: rowCount;
+}
+
+table > tbody > tr {
+  counter-increment: rowCount;
+}
+
+table > tbody > tr > td:first-child::before {
+  content: counter(rowCount);
+}

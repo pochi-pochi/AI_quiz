@@ -2,14 +2,59 @@
 {% block title %}結果表示画面{% endblock %}
 
 {% block content %}
-<h2>Result</h2>
-<p>最高記録：{{ correct }}</p>
-<p>今回の記録：{{ correct_sum }}</p>
+<h1 class="l-title">Result</h2>
+<div class="u-flex2">
+<p class="c-high__score">最高記録：{{ correct }}</p>
+<p class="c-current__score">今回の記録：{{ correct_sum }}</p>
+</div>
+<div class="card col-md-18 dt-image-content">
+<table class="table table-bordered table-striped">
+<thead>
+            <tr>
+                <th>問題</th>
+                <!-- <th>ID</th> -->
+                <th>正誤</th>
+            </tr>
+        </thead>
+<tbody>
+
 {% for yes_or_no in correct_or_not %}
+
 {% if yes_or_no=="1" %}
-<p>正解</p>
+<!-- <p>正解</p> -->
+<tr>
+	<td></td>
+<td>○</td>
+</tr>
 {% elif yes_or_no=="0" %}
-<p>不正解</p>
+<tr>
+	<td></td>
+<td>×</td>
+</tr>
 {% endif %}
 {% endfor %}
+</tbody>
+</table>
+</div>
+<div class="u-flex">
+<a class="nav-link" href="{{ url_for('quiz.index') }}">
+     <button class="u-button__challenge">  
+     Menuに戻る
+     </button> 
+    </a>
+<a class="nav-link" href="{{ url_for('quiz.quiz_make') }}">
+     <button class="u-button__challenge">  
+     クイズに挑戦する
+     </button> 
+    </a>
+
+    <a class="nav-link" href="{{ url_for('auth.logout') }}">
+        <button class="u-button__ranking">
+            ログアウト
+        </button>
+    </a>
+    </div>
+
+
 {% endblock %}
+
