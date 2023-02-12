@@ -366,3 +366,12 @@ input[type="search"] {
   margin-top: 300px;
   text-align: center;
 }
+
+/* ランキング画面構造 */
+.u-flex {
+  display: flex;
+  width: 100%;
+  /* background: red; */
+  margin-top: 80px;
+  margin-left: 432px;
+}
