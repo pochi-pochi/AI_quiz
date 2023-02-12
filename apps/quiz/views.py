@@ -3,7 +3,7 @@ import os
 import random
 
 import openai
-from flask import Blueprint, flash, redirect, render_template, request, url_for
+from flask import Blueprint, redirect, render_template, request, url_for
 from flask_login import current_user, login_required
 
 from apps.app import db
@@ -77,7 +77,6 @@ def quiz_page():
     print(quiz_num)
 
     if quiz_num == 10:
-        flash("結果発表！")
         return redirect(
             url_for(
                 "quiz.quiz_result",
@@ -99,11 +98,9 @@ def quiz_page():
             correct_or_not.append(1)
             correct_count += 1
             quiz_num += 1
-            # flash("正解!")
         else:
             correct_or_not.append(0)
             quiz_num += 1
-            # flash("不正解…")
         response = redirect(url_for("quiz.quiz_page"))
         response.set_cookie("correct_count", str(correct_count))
         response.set_cookie("quiz_num", str(quiz_num))
