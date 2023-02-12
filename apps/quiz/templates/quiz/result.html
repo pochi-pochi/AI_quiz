@@ -1,8 +1,8 @@
-{% extends "quiz/base.html" %}
+{% extends "quiz/base2.html" %}
 {% block title %}結果表示画面{% endblock %}
 
 {% block content %}
-<h2>結果発表</h2>
+<h2>Result</h2>
 <p>最高記録：{{ correct }}</p>
 <p>今回の記録：{{ correct_sum }}</p>
 {% for yes_or_no in correct_or_not %}
