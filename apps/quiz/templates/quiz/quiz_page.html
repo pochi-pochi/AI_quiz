@@ -1,8 +1,8 @@
-{% extends "quiz/base.html" %}
+{% extends "quiz/base2.html" %}
 {% block title %}クイズ一覧画面{% endblock %}
 {% block content %}
 <section class="radios-boxes">
-<h1 style="margin-top:50px;">QUIZ</h1>
+<h1 style="margin-top:50px;">QUIZですけど</h1>
 <form method="post">
     {{ form.hidden_tag() }}
     <h2>{{ quiz_prompt }}</h2>
@@ -21,7 +21,13 @@
 </div>
 </form>
 </section>
-
+<footer class="l-footer">
+Copyright © 2023 Taguchi kakuto
+                 Yagi takahiro
+                 Nakazima masato
+                 Asahi kei
+                 Takasu ayami 
+</footer>
 <style>
 .radios-boxes {
     display: flex;
