@@ -1,27 +1,46 @@
-{% extends "quiz/base.html" %}
+{% extends "quiz/base2.html" %}
 {% block title %}クイズ一覧画面{% endblock %}
 {% block content %}
-<section class="radios-boxes">
-<h1 style="margin-top:50px;">QUIZ</h1>
+<h1 class="l-problem__title">QUESTION</h1>
+
+<section>
+    <!-- <div class="quizarea"> -->
+<!-- <h3 style="">Question</h3> -->
+
 <form method="post">
-    {{ form.hidden_tag() }}
-    <h2>{{ quiz_prompt }}</h2>
+{{ form.hidden_tag() }}
+<!-- <h3 class="question__title">Question</h3> -->
+
+<div class="question">
+    <h2 class="flowing">{{ quiz_prompt }}</h2>
+    </div>
+    <!-- </div> -->
     <div class="radios-boxes">
         {% for label, value in form.choice.choices %}
         <label>
-            <input type="radio" name="choice" class="radio" value="{{ value }}">
-            <div class="labels">
-                <label for="radio1" class="label">{{ label }}</label>
+            <label class="labe">
+                <input type="radio" name="choice" class="radio" value="{{ value }}">
+                {{ label }}
+            </label>
+
+            <div class="label labelareades">
             </div>
         </label>
         {% endfor %}
-    <div>
-        <input type="submit" value="回答する">
-    </div>
 </div>
+<div class="l-problem__answerbutton">
+        <input type="submit" class="u-button__ranking" value="回答する">
+    </div>
+
 </form>
 </section>
-
+<footer class="l-footer">
+Copyright © 2023 Taguchi kakuto
+                 Yagi takahiro
+                 Nakazima masato
+                 Asahi kei
+                 Takasu ayami 
+</footer>
 <style>
 .radios-boxes {
     display: flex;
