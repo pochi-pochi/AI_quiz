@@ -393,11 +393,29 @@ input[type="search"] {
   margin-right: 20px;
 }
 /* クイズ画面設計 */
+.ladio__area {
+  width: 80%;
+  margin-left: auto;
+  /* background: red; */
+  /* display: flex; */
+}
+
+.labelareadesu {
+  /* background: red; */
+  font-size: 20px;
+  /* display: flex; */
+  margin-left: 100px;
+  margin-top: 10px;
+  align-items: center;
+  line-height: 30px;
+  text-align: center;
+}
 
 .l-problem__title {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 40px;
   font-family: "Cabin Sketch", cursive;
   font-size: 50px;
 }
@@ -413,16 +431,24 @@ input[type="search"] {
   display: flex;
 }
 
+.question__title {
+  margin-right: 600px;
+  margin-bottom: 10px;
+}
+
 .flowing {
   width: 0;
-  margin: 0;
+  margin-left: 0px;
+  margin-right: 0px;
   font-size: 24px;
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
+  border: dotted brown;
   white-space: nowrap;
   overflow: hidden;
   animation: flowing-anim 1s forwards linear;
-  height: 200px;
+  /* height: 200px; */
+  background: white;
 
   flex-wrap: wrap;
 }
@@ -455,4 +481,8 @@ table > tbody > tr {
 
 table > tbody > tr > td:first-child::before {
   content: counter(rowCount);
+}
+
+.labe {
+  cursor: pointer;
 }
